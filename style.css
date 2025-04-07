@@ -1,73 +1,82 @@
+/* Style for the entire page */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    padding: 30px;
-    background: #f4f6f8;
-    max-width: 600px;
-    margin: auto;
+    font-family: 'Segoe UI', sans-serif; /* Use a clean, easy-to-read font */
+    padding: 30px;                       /* Add space inside the edges of the page */
+    background: #f4f6f8;                 /* Light gray background to keep it soft on the eyes */
+    max-width: 600px;                    /* Keep everything from stretching too wide */
+    margin: auto;                        /* Center the content in the browser window */
 }
 
+/* Search bar at the top for filtering roles */
 #roleSearch {
-    width: 50%;
-    padding: 10px;
-    margin-bottom: 20px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    width: 50%;                          /* Make the search bar half as wide as the page */
+    padding: 10px;                       /* Add space inside the box so text isn't squished */
+    margin-bottom: 20px;                /* Add space underneath it */
+    font-size: 1rem;                    /* Set a nice readable text size */
+    border: 1px solid #ccc;             /* Light gray border around the box */
+    border-radius: 6px;                 /* Slightly round the corners of the box */
 }
 
+/* Each role (like Frontend, Backend) in the list */
 #roles .role-option {
-    display: block;
-    margin: 8px 0;
+    display: block;                     /* Make each role take up its own line */
+    margin: 8px 0;                      /* Add space above and below each one */
 }
 
+/* A "card" box that holds the list of roles */
 .roles-card {
-    margin-top: 30px;
-    background: white;
-    padding: 20px;
-    border-radius: 6px;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;                   /* Push the box down from the top of the page */
+    background: white;                  /* Make the card white so it stands out */
+    padding: 20px;                      /* Add space inside the card around the content */
+    border-radius: 6px;                 /* Round the corners to make it look nicer */
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1); /* Add a faint shadow to lift it off the page */
 }
 
+/* The section that shows skill results */
 .skills-output {
-    margin-top: 30px;
-    background: white;
-    padding: 20px;
-    border-radius: 6px;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
-    display: none;
+    margin-top: 30px;                   /* Add space between this and whatever's above */
+    background: white;                  /* White background like a card */
+    padding: 20px;                      /* Padding inside the box for comfort */
+    border-radius: 6px;                 /* Rounded corners to match the roles box */
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1); /* Same light shadow to make it pop */
+    display: none;                      /* Hide it until someone picks a role */
 }
 
+/* Each little blue bubble that represents a skill */
 .badge {
-    display: inline-block;
-    background: #007bff;
-    color: white;
-    padding: 6px 12px;
-    margin: 5px 4px;
-    border-radius: 16px;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    cursor: help;
+    display: inline-block;             /* Let them sit side by side in rows */
+    background: #007bff;               /* Blue color for default skill badges */
+    color: white;                      /* White text so it’s easy to read */
+    padding: 6px 12px;                 /* Add space inside each badge */
+    margin: 5px 4px;                   /* Space between badges so they don't stick together */
+    border-radius: 16px;               /* Round the edges to make them pill-shaped */
+    font-size: 0.9rem;                 /* Slightly smaller than normal text */
+    transition: all 0.3s ease;         /* Make hover/fade effects feel smooth */
+    cursor: help;                      /* Show the “?” cursor to hint there's a tooltip */
 }
 
+/* Green version of a skill badge if it's used by more than one role */
 .badge.shared {
-    background: #28a745;
+    background: #28a745;              /* Green badge for skills shared across roles */
 }
 
+/* Button to export selected roles and skills as a file */
 #exportBtn {
-    background: #222;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-bottom: 10px;
+    background: #222;                 /* Dark background to stand out */
+    color: white;                     /* White text for strong contrast */
+    padding: 10px 20px;               /* Big enough to be easy to click */
+    border: none;                     /* Remove default border */
+    border-radius: 4px;               /* Slightly round the edges */
+    cursor: pointer;                  /* Show pointer cursor to indicate it's clickable */
+    margin-bottom: 10px;              /* Space between button and what's below it */
 }
 
+/* Search bar that filters the visible skill badges */
 #skillSearch {
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-    width: 50%;
-    padding: 8px;
-    margin-bottom: 10px;
+    border: 1px solid #ccc;           /* Light border around the box */
+    border-radius: 6px;               /* Round the corners a bit */
+    font-size: 1rem;                  /* Keep the text readable */
+    width: 50%;                       /* Make it half the width of the page */
+    padding: 8px;                     /* Space inside the box */
+    margin-bottom: 10px;              /* Space below before badges appear */
 }

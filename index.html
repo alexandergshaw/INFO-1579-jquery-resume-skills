@@ -1,35 +1,74 @@
 <!DOCTYPE html>
+<!-- Declares this file is using HTML5 -->
 <html lang="en">
 
 <head>
+    <!-- Sets the character encoding for the document -->
     <meta charset="UTF-8">
-    <title>Role Skill Explorer</title>
+
+    <!-- The title that appears in the browser tab -->
+    <title>Skill Explorer</title>
+
+    <!-- Link to the jQuery library (hosted by CDN) -->
+    <!-- This allows us to use jQuery functions in our app.js file -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Link to the custom JavaScript file that contains the app logic -->
     <script src="app.js"></script>
+
+    <!-- Link to the external CSS file for layout and styling -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <!-- Container for the role selector section -->
     <div class="roles-card">
+        <!-- Main heading for the role selection section -->
         <h2>Explore Skills by Role</h2>
 
+        <!-- Search input for filtering roles in real-time -->
+        <!-- This lets the user type and filter role checkboxes below -->
         <input type="text" id="roleSearch" placeholder="Search roles...">
 
+        <!-- List of roles as checkboxes -->
+        <!-- Each input has a specific value that will be used in the JS to match data -->
         <div id="roles">
-            <label class="role-option"><input type="checkbox" value="frontend"> Frontend Developer</label>
-            <label class="role-option"><input type="checkbox" value="backend"> Backend Developer</label>
-            <label class="role-option"><input type="checkbox" value="fullstack"> Full Stack Developer</label>
-            <label class="role-option"><input type="checkbox" value="devops"> DevOps Engineer</label>
-            <label class="role-option"><input type="checkbox" value="data"> Data Scientist</label>
+            <label class="role-option">
+                <input type="checkbox" value="frontend"> Frontend Developer
+            </label>
+            <label class="role-option">
+                <input type="checkbox" value="backend"> Backend Developer
+            </label>
+            <label class="role-option">
+                <input type="checkbox" value="fullstack"> Full Stack Developer
+            </label>
+            <label class="role-option">
+                <input type="checkbox" value="devops"> DevOps Engineer
+            </label>
+            <label class="role-option">
+                <input type="checkbox" value="data"> Data Scientist
+            </label>
         </div>
     </div>
 
+    <!-- Container for displaying associated skills dynamically -->
     <div class="skills-output" id="skills">
+
+        <!-- Section title for associated skills -->
         <h2>Associated Skills</h2>
+
+        <!-- Search input for filtering visible skill badges -->
+        <!-- This filters already-rendered skills, not the roles -->
         <input type="text" id="skillSearch" placeholder="Search skills...">
-        <button id="exportBtn">📤 Export Selected</button>
+
+        <!-- Button that allows the user to export selected roles and their skills -->
+        <!-- Export is handled via JavaScript and creates a .txt file for download -->
+        <button id="exportBtn">Export Selected</button>
+
+        <!-- This is where skill badges will be dynamically inserted via jQuery -->
         <div id="skillList"></div>
     </div>
-</body>
 
+</body>
 </html>
