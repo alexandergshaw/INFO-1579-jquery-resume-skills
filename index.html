@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Role Skill Explorer</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h2>🔍 Explore Skills by Role</h2>
+
+    <input type="text" id="roleSearch" placeholder="Search roles...">
+
+    <div id="roles">
+        <label class="role-option"><input type="checkbox" value="frontend"> Frontend Developer</label>
+        <label class="role-option"><input type="checkbox" value="backend"> Backend Developer</label>
+        <label class="role-option"><input type="checkbox" value="fullstack"> Full Stack Developer</label>
+        <label class="role-option"><input type="checkbox" value="devops"> DevOps Engineer</label>
+        <label class="role-option"><input type="checkbox" value="data"> Data Scientist</label>
+    </div>
+
+    <button id="exportBtn">📤 Export Selected</button>
+
+    <div class="skills-output" id="skills">
+        <h3>Associated Skills:</h3>
+
+        <!-- 🔍 NEW: Skill search bar -->
+        <input type="text" id="skillSearch" placeholder="Search skills..."
+            style="width: 50%; padding: 8px; margin-bottom: 10px;">
+
+        <div id="skillList"></div>
+    </div>
+
+</body>
+
+</html>
