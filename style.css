@@ -1,17 +1,35 @@
 /* Style for the entire page */
-body {
-    font-family: 'Segoe UI', sans-serif; /* Use a clean, easy-to-read font */
-    padding: 30px;                       /* Add space inside the edges of the page */
-    background: #f4f6f8;                 /* Light gray background to keep it soft on the eyes */
-    max-width: 600px;                    /* Keep everything from stretching too wide */
-    margin: auto;                        /* Center the content in the browser window */
+/* Make sure the whole page fills the screen vertically */
+html, body {
+    height: 100%;   /* Sets both the HTML element and body to take up 100% of the browser height */
+    margin: 0;      /* Removes default space around the edges of the page */
+    padding: 0;     /* Removes default padding inside the page */
 }
+
+/* Style the entire page area */
+body {
+    display: flex;                   /* Use flexbox so we can control how content is arranged vertically */
+    flex-direction: column;         /* Stack content from top to bottom */
+    justify-content: flex-start;    /* Keep content pushed to the top (no vertical centering) */
+
+    font-family: 'Segoe UI', sans-serif; /* Clean, readable font for all text */
+
+    /* Create a smooth background that fades from white to light blue */
+    background: linear-gradient(to bottom right, #fefefe, #e7f0fa);
+
+    min-height: 100%;               /* Make sure the background covers the whole screen height */
+    padding: 30px;                  /* Add space between the content and the edges */
+    max-width: 600px;               /* Keep content from being too wide (for readability) */
+    margin: auto;                   /* Center the content horizontally */
+    overflow: hidden;               /* Ensure that the page ends gracefully at the bottom */
+}
+
 
 /* Search bar at the top for filtering roles */
 #roleSearch {
     width: 50%;                          /* Make the search bar half as wide as the page */
     padding: 10px;                       /* Add space inside the box so text isn't squished */
-    margin-bottom: 20px;                /* Add space underneath it */
+    margin-bottom: 10px;                /* Add space underneath it */
     font-size: 1rem;                    /* Set a nice readable text size */
     border: 1px solid #ccc;             /* Light gray border around the box */
     border-radius: 6px;                 /* Slightly round the corners of the box */
